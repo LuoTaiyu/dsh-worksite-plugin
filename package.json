@@ -1,0 +1,62 @@
+{
+  "name": "@local/dsh-site-view",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Anthropomorphic engineering progress view for a DSH session: a jobsite mascot, construction tower, stage rail, and live tool activity.",
+  "author": "Luo Taiyu",
+  "license": "MIT",
+  "homepage": "https://github.com/LuoTaiyu/dsh-worksite-plugin#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuoTaiyu/dsh-worksite-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LuoTaiyu/dsh-worksite-plugin/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "session-view",
+    "visualization",
+    "engineering"
+  ],
+  "engines": {
+    "dsh": ">=0.2.1-rc.5 <0.3.0"
+  },
+  "scripts": {
+    "test": "node test/derive.test.mjs"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE",
+    "test/*.mjs"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-api-session-controller",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-renderer",
+        "@deepseek-ai/dsh-client-ui-session"
+      ]
+    }
+  }
+}

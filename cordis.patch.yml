@@ -1,0 +1,3 @@
+- insert:
+    - id: site-view
+      name: '@local/dsh-site-view'
