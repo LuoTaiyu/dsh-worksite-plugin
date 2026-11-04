@@ -3,7 +3,7 @@
 一个 DSH Web GUI 会话视图插件。它把当前 Session 的持久事件、任务清单和运行状态，翻译成一座正在施工的工地：
 
 - GitHub 仓库：<https://github.com/LuoTaiyu/dsh-worksite-plugin>
-- 插件市场索引：<https://raw.githubusercontent.com/LuoTaiyu/dsh-worksite-plugin/main/market.json>
+- 插件市场索引：<https://cdn.jsdelivr.net/gh/LuoTaiyu/dsh-worksite-plugin@main/market.json>
 - 版本：`0.1.0`（commit `5c52c9019e461399feddcf060b4e86522d0c7b06`）
 
 > GitHub 的仓库名只接受 ASCII 字符，中文名会被清洗成 `-`；因此实际仓库使用稳定 slug `dsh-worksite-plugin`，项目中文名仍是「工程现场插件」。
@@ -60,7 +60,7 @@ git+https://github.com/LuoTaiyu/dsh-worksite-plugin.git
 DSH 当前没有官方中心市场；Plugin Manager 的 Discover 只列出用户自己添加的索引。本仓库自带一个 format 1 市场索引：
 
 ```text
-https://raw.githubusercontent.com/LuoTaiyu/dsh-worksite-plugin/main/market.json
+https://cdn.jsdelivr.net/gh/LuoTaiyu/dsh-worksite-plugin@main/market.json
 ```
 
 启用 **Plugins → Experimental plugins → Custom plugin markets**，在 Discover 中添加这个索引，即可搜索并安装「工程现场」。
