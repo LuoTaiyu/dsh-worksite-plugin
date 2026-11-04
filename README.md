@@ -4,7 +4,7 @@
 
 - GitHub 仓库：<https://github.com/LuoTaiyu/dsh-worksite-plugin>
 - 插件市场索引：<https://cdn.jsdelivr.net/gh/LuoTaiyu/dsh-worksite-plugin@main/market.json>
-- 版本：`0.1.0`（commit `5c52c9019e461399feddcf060b4e86522d0c7b06`）
+- 版本：`0.1.0`
 
 > GitHub 的仓库名只接受 ASCII 字符，中文名会被清洗成 `-`；因此实际仓库使用稳定 slug `dsh-worksite-plugin`，项目中文名仍是「工程现场插件」。
 
