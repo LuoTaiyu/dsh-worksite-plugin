@@ -1,0 +1,87 @@
+{
+  "format": 1,
+  "title": {
+    "en": "Luo Taiyu's DSH Plugins",
+    "zh": "Luo Taiyu 的 DSH 插件"
+  },
+  "description": {
+    "en": "Small, local-first DSH plugins published by Luo Taiyu.",
+    "zh": "Luo Taiyu 发布的轻量、本地优先 DSH 插件。"
+  },
+  "metadata": {
+    "categories": {
+      "interface": {
+        "title": {
+          "en": "Interface and visualization",
+          "zh": "界面与可视化"
+        }
+      }
+    },
+    "labels": {
+      "session-view": {
+        "title": {
+          "en": "Session view",
+          "zh": "会话视图"
+        }
+      },
+      "visualization": {
+        "title": {
+          "en": "Visualization",
+          "zh": "可视化"
+        }
+      }
+    },
+    "sortKeys": {}
+  },
+  "plugins": [
+    {
+      "name": "@local/dsh-site-view",
+      "title": {
+        "en": "Worksite",
+        "zh": "工程现场"
+      },
+      "description": {
+        "en": "An anthropomorphic engineering view of a DSH session: a jobsite mascot, construction tower, stage rail, live tool activity, and todo progress.",
+        "zh": "把 DSH 会话变成一座正在施工的工地：拟人化小匠、施工塔、工序航线、实时工具动态与任务清单进度。"
+      },
+      "icon": "icon.svg",
+      "author": "Luo Taiyu",
+      "homepage": "https://github.com/LuoTaiyu/dsh-worksite-plugin",
+      "repository": {
+        "url": "https://github.com/LuoTaiyu/dsh-worksite-plugin"
+      },
+      "metadata": {
+        "category": "interface",
+        "keywords": [
+          "DSH",
+          "session view",
+          "progress",
+          "mascot",
+          "engineering",
+          "工程进度",
+          "拟人化",
+          "可视化"
+        ],
+        "labels": [
+          "session-view",
+          "visualization"
+        ],
+        "sortKeys": {}
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "publishTimestamp": 1793793004,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/LuoTaiyu/dsh-worksite-plugin",
+            "commit": "5c52c9019e461399feddcf060b4e86522d0c7b06"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.5 <0.3.0"
+          }
+        }
+      ]
+    }
+  ]
+}

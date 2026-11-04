@@ -2,6 +2,12 @@
 
 一个 DSH Web GUI 会话视图插件。它把当前 Session 的持久事件、任务清单和运行状态，翻译成一座正在施工的工地：
 
+- GitHub 仓库：<https://github.com/LuoTaiyu/dsh-worksite-plugin>
+- 插件市场索引：<https://raw.githubusercontent.com/LuoTaiyu/dsh-worksite-plugin/main/market.json>
+- 版本：`0.1.0`（commit `5c52c9019e461399feddcf060b4e86522d0c7b06`）
+
+> GitHub 的仓库名只接受 ASCII 字符，中文名会被清洗成 `-`；因此实际仓库使用稳定 slug `dsh-worksite-plugin`，项目中文名仍是「工程现场插件」。
+
 - **拟人化现场工程师「小匠」**：思考、施工、验收、交付、返工、待命六种状态，带表情、安全帽、图纸、扳手和状态气泡。
 - **施工塔**：把 todo 或会话阶段映射成楼层；已完成、施工中、待建三种楼层状态，带塔吊和作业面提示。
 - **工序航线**：图纸会审 → 主体施工 → 质量验收 → 交付使用，四段式阶段轨。
@@ -20,6 +26,7 @@
 | `client.js` | 浏览器半侧：`conversation.view` 注册、数据推导、React 组件、CSS |
 | `locale/{en,zh}.json` | Plugin Manager / Settings 显示元数据 |
 | `icon.svg` | 原创图标 |
+| `market.json` | DSH 插件市场索引（format 1） |
 | `README.md` | 本说明 |
 
 ## 数据来源
@@ -28,11 +35,37 @@
 - `useProjection('todos')`：当前任务清单。
 - `useProjection('goal')`：持久目标（可选）。
 - `useProjection('title')`：会话标题（可选）。
-- `session.eventSource`：resident 会话事件窗口，用于工具调用、轮次、错误、token 用量。
+- Session binding 的 `eventSource`：resident 会话事件窗口，用于工具调用、轮次、错误、token 用量。
 
 进度是**会话信号估算**，不是模型自报的完成度：todo 占主导，工具活动与验收信号作补充；没有 todo 时按会话阶段估算。界面上明确标注了这一点。
 
 ## 安装
+
+### 从 GitHub 安装
+
+在 DSH 的 Plugin Manager 中使用「安装第三方插件」，填入 commit-pinned Git 地址：
+
+```text
+git+https://github.com/LuoTaiyu/dsh-worksite-plugin.git#5c52c9019e461399feddcf060b4e86522d0c7b06
+```
+
+也可以直接使用仓库地址后再做一次更新：
+
+```text
+git+https://github.com/LuoTaiyu/dsh-worksite-plugin.git
+```
+
+### 从插件市场安装
+
+DSH 当前没有官方中心市场；Plugin Manager 的 Discover 只列出用户自己添加的索引。本仓库自带一个 format 1 市场索引：
+
+```text
+https://raw.githubusercontent.com/LuoTaiyu/dsh-worksite-plugin/main/market.json
+```
+
+启用 **Plugins → Experimental plugins → Custom plugin markets**，在 Discover 中添加这个索引，即可搜索并安装「工程现场」。
+
+### 本地安装
 
 本包是一个本地 Bundle。通过 Plugin Manager 的「安装第三方插件 → 本地目录」安装 `dsh-site-view` 的绝对路径，或由宿主侧 `install_bundle` 完成。安装后打开任意会话，顶部的会话视图切换环中会出现「工程现场 / Worksite」。
 
